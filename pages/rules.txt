@@ -1,0 +1,12 @@
+* The Dallas Makerspace is not a storage facility, projects and materials that do not follow these rules, [bold red]will be discarded[/].
+* You may only use a storage spot for a [bold yellow]maximum of 7 days[/].
+* Once you have removed your belongings and signed out of storage you will not be able to use project storage again for a period of 7 days.
+* Unused storage time will be refunded, reducing the time before you can again use a storage spot.
+* You must remove your belongings [bold yellow]and sign out of storage[/] before the end of your 7 days.
+* Email notifications will be sent to the email address you have on file.
+
+* There is a 7 day grace period after a project storage ticket has expired.
+* Any items left in the storage spot at the end of the grace period [bold red]will be discarded[/].
+* Spots that have not be cleared will result in an [bold yellow]automatic ban from project storage for 90 days[/].
+* If you clear the spot before the end of the grace period the ban length will be shortened to only 14 days.
+* The 14 day ban begins once the spot has been cleared and you have signed out.
