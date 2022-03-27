@@ -40,6 +40,13 @@ def get_page(page):
     return content
 
 
+def pretty_datetime(timestamp: datetime | str):
+    if isinstance(timestamp, str):
+        timestamp = dateutil.parser.isoparse(timestamp)
+
+    return timestamp.astimezone(None).strftime("%a %b %d %Y @ %I:%M %p %Z")
+
+
 def show_rules():
     console.clear()
     print(Panel(get_page("rules"), title="Rules"))
@@ -71,7 +78,7 @@ def promptRFID():
         )
         if banned_until > datetime.now(timezone.utc):
             raise Exception(
-                f"[bold red]You are not allowed to use storage until: {banned_until.astimezone(None)}[/]"
+                f"[bold red]You are not allowed to use storage until: {pretty_datetime(banned_until)}[/]"
             )
 
     return member
@@ -198,7 +205,7 @@ if __name__ == "__main__":
         if existing_ticket:
             print(
                 Panel(
-                    f"You have been signed out of your storage spot [green]{existing_ticket['spot']['name']}[/], you may use project storage again after: [green]{existing_ticket['member']['banned_until']}[/]"
+                    f"You have been signed out of your storage spot [green]{existing_ticket['spot']['name']}[/], you may use project storage again after: [green]{pretty_datetime(existing_ticket['member']['banned_until'])}[/]"
                 )
             )
             sleep(20)
@@ -232,7 +239,7 @@ if __name__ == "__main__":
 
         print(
             Panel(
-                f"Your spot has been reserved!\n\nYou can use spot [bold]{ticket['spot_name']}[/] until [bold green]{ticket['expires_at']}[/]."
+                f"Your spot has been reserved!\n\nYou can use spot [bold]{ticket['spot_name']}[/] until [bold green]{pretty_datetime(ticket['expires_at'])}[/]."
             )
         )
         sleep(20)
