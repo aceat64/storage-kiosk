@@ -41,7 +41,7 @@ def get_page(page):
 
 
 def show_rules():
-    # console.clear()
+    console.clear()
     print(Panel(get_page("rules"), title="Rules"))
 
 

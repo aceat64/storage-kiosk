@@ -1,5 +1,7 @@
 # storage-kiosk
 
+[![asciicast](https://asciinema.org/a/480893.svg)](https://asciinema.org/a/480893)
+
 ## User Interaction Flow
 
 - Scan badge
